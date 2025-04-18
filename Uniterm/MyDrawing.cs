@@ -72,6 +72,7 @@ namespace Uniterm
                 if (eA != "")
                 {
                     DrawElim(new Point(30, fontsize * 3 + 30));
+                    //DrawSek(new Point(30, fontsize + 30));
                 }
             }
         }
@@ -98,14 +99,14 @@ namespace Uniterm
             if (eA == "" || eB == "" || eC == "") return;
 
             Point p2 = new Point(pt.X + 2, pt.Y);
-            string text = eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() +
-                eB + Environment.NewLine.ToString() +
-                ";" + Environment.NewLine.ToString() + eC;
+            string text = eA + " ; " + eB +" ; " + eC;
 
-            double l = GetTextHeight(text) + 2;
+            double l = GetTextLength(text);
 
-            DrawText(p2, text);
-            DrawVert(pt, (int)l);
+            //DrawText(p2, text);
+            //DrawVert(pt, (int)l);
+            DrawText(pt, text);
+            DrawElHorizontal(pt, (int)l);
         }
 
         public void DrawSwitched(Point pt)
@@ -113,28 +114,30 @@ namespace Uniterm
             if (sA == "" || sOp == "" || eA == "" || eB == "" || eC == "") return;
 
 
-            string textElim = eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() +
-                eB + Environment.NewLine.ToString() +
-                ";" + Environment.NewLine.ToString() + eC;
+            string textElim = eA + " ; " + eB + " ; " + eC;
 
             int length = GetTextLength(textElim);
 
-            sOp = " " + sOp + " ";
+            string tmpOp = " " + sOp + " ";
+            Console.WriteLine("sOp:"+ tmpOp);
 
             if (oper == 'A')
             {
-                DrawText(new Point(pt.X + length + (fontsize / 3), pt.Y + 3), sOp + sB);
-                DrawElim(new Point(pt.X + (fontsize / 3), pt.Y + 3));
-                length += GetTextLength(sOp + sB) + (int)(fontsize / 3);
+                DrawText(new Point(pt.X + length + (fontsize / 3), pt.Y + 3), tmpOp + sB);
+                DrawElim(new Point(pt.X + (fontsize / 3), pt.Y + 5));
+                length += GetTextLength(tmpOp + sB) + (int)(fontsize / 3);
             }
             if (oper == 'B')
             {
-                DrawText(pt, sA + sOp);
-               DrawElim(new Point(pt.X + GetTextLength(sA + sOp) + (fontsize / 3), pt.Y));
-                length += GetTextLength(sA + sOp) + (int)(fontsize / 3);
+                int sekTextLenght = GetTextLength(sA+tmpOp)+10;
+
+                DrawText(new Point(pt.X+5,pt.Y), sA + tmpOp+ " ");
+                DrawElim(new Point(pt.X + sekTextLenght + (fontsize / 3), pt.Y + 5));
+
+                length += GetTextLength(sOp + sB) + (int)(fontsize / 3)+10;
             }
-            sOp = Convert.ToString(sOp[1]);
-            DrawBezier(pt, length + 5); //+5 poniewaz Kreska tyle zajmuje
+
+            DrawBezier(pt, length + 5);
 
         }
         #endregion
@@ -172,6 +175,22 @@ namespace Uniterm
                 dc.DrawLine(pen, start, pt);
                 start = pt;
             }
+        }
+
+        private void DrawElHorizontal(Point p0,int length)
+        {
+            Point start = p0;
+            Point end  = new Point();
+            end.X = p0.X + length;
+            end.Y = p0.Y;
+
+            double b = (Math.Sqrt(length) / 2) + 4;
+
+            dc.DrawLine(pen, new Point(start.X, start.Y - (b / 2)), new Point(start.X, start.Y + (b / 2)));
+            dc.DrawLine(pen, new Point(end.X, end.Y - (b / 2)), new Point(end.X, end.Y + (b / 2)));
+
+            dc.DrawLine(pen, start, end);
+
         }
 
         private void DrawText(Point point, string text)
