@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="68623021-af8c-4568-a50e-f2eb208e306d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="1e8907cb-0f9b-4e08-bb4a-bf6c2e2bb580" name="Warstwa Programu Uniterm&#xD;&#xA;">
+      <childLayers>
+        <layer Id="2b5c483e-45fe-4742-a8bd-893b849a2389" name="Warstwa Przestrzeni Nazw Uniterm&#xD;&#xA;">
+          <childLayers>
+            <layer Id="19fbc420-33dd-4c9b-b333-689d5722a1ab" name="Warstwa UI">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="45c7c35d-83a5-4d4b-9b2b-778384817b74" direction="Forward">
+                  <layerMoniker Id="2d530ce3-c358-4a4e-9396-c5c7bf3aab6d" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="7050038b-6ed8-4528-93b0-dd5e3fdb1dc4" name="Window1&#xD;&#xA;" />
+                <layer Id="21b973f7-8fd7-447b-9c0a-f10177e462da" name="AddUniterm&#xD;&#xA;" />
+                <layer Id="c79b17d8-73dd-4a2c-a257-e8c6d51e1422" name="AddElem&#xD;&#xA;" />
+                <layer Id="8323ceda-a0ef-4826-8e06-405259259970" name="MyCanvas" />
+              </childLayers>
+            </layer>
+            <layer Id="14da34cc-1dd0-44f9-9131-87ec05030ac9" name="Warstwa Dostępu do Danych&#xD;&#xA;">
+              <childLayers>
+                <layer Id="b742738f-3a2c-4616-aea4-8fcd9090878e" name="DataBase" />
+              </childLayers>
+            </layer>
+            <layer Id="2d530ce3-c358-4a4e-9396-c5c7bf3aab6d" name="Warstwa Logiczna&#xD;&#xA;">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="0037c625-2b17-4f36-b456-52aa0690878b" direction="Forward">
+                  <layerMoniker Id="14da34cc-1dd0-44f9-9131-87ec05030ac9" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="e97aaa7e-ac68-4281-bd94-0e6a43c1352d" name="MyDrawing" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

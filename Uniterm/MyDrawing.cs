@@ -144,16 +144,6 @@ namespace Uniterm
 
         #region Private Methods
 
-        private void DrawVert(Point pt, int length)
-        {
-            dc.DrawLine(pen, pt, new Point { X = pt.X, Y = pt.Y + length });
-            double b = (Math.Sqrt(length) / 2) + 2;
-
-            dc.DrawLine(pen, new Point(pt.X - (b / 2), pt.Y), new Point(pt.X + (b / 2), pt.Y));
-            dc.DrawLine(pen, new Point(pt.X - (b / 2), pt.Y + length), new Point(pt.X + (b / 2), pt.Y + length));
-
-        }
-
         private void DrawBezier(Point p0, int length)
         {
             Point start = p0;
@@ -196,11 +186,6 @@ namespace Uniterm
         private void DrawText(Point point, string text)
         {
             dc.DrawText(GetFormattedText(text), point);
-        }
-
-        private int GetTextHeight(string text)
-        {
-            return (int)GetFormattedText(text).Height;
         }
 
         private int GetTextLength(string text)

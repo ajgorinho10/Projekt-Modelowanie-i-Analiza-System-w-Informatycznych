@@ -160,25 +160,22 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window1_ehCBFontsChanged.sequencediagram.layout">
-      <DependentUpon>Window1_ehCBFontsChanged.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window1_ehCBFontsChanged_1.sequencediagram.layout">
-      <DependentUpon>Window1_ehCBFontsChanged_1.sequencediagram</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram.layout">
       <DependentUpon>Window1_ehlbUNitermsSelectionChanged.sequencediagram</DependentUpon>
     </EmbeddedResource>
+    <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Window1_ehCBFontsChanged.sequencediagram" />
-    <None Include="Window1_ehCBFontsChanged_1.sequencediagram" />
     <None Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +199,10 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

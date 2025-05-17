@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.36101.20
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniterm", "Uniterm\Uniterm.csproj", "{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DependencyValidation1", "DependencyValidation1\DependencyValidation1.modelproj", "{8F2CA5DC-8F35-4292-8A57-FD8AE7C6EB08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,11 +17,15 @@ Global
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2CA5DC-8F35-4292-8A57-FD8AE7C6EB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2CA5DC-8F35-4292-8A57-FD8AE7C6EB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2CA5DC-8F35-4292-8A57-FD8AE7C6EB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2CA5DC-8F35-4292-8A57-FD8AE7C6EB08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39D28E9B-21F0-4162-9ED7-411462AB30DB}
 	EndGlobalSection
 EndGlobal
