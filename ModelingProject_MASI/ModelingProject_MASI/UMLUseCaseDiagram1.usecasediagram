@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="28ebbc1d-6a5f-4bc8-8a5a-d7e06d653e43" name="UMLUseCaseDiagram1" linkedPackageId="2364ebf4-6b44-4da2-b692-c4fabb4d4325" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="127233ca-0596-45bf-8842-dbb9355be9ff">
+      <profileInstance Id="bf641561-4cec-40ff-b058-4a48074d779c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ac003c2e-0330-4c49-8975-fb84d33b8644">
+      <profileInstance Id="ab93d194-098e-42e1-b0f4-8df5663e5787" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ebc42d69-694f-47ec-9151-bae0a09a8b7b" name="Użytkownik" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b26fb39b-5db2-4698-b076-3e1413621e19" />
+        <targetEnds>
+          <association Id="2ce5dd93-a939-494a-9206-80658661d630" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Odczytanie Unitermu z Bazy danych" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cc57579d-c54c-467b-ba0c-3b54d4bf129f" LastKnownName="Odczytanie Unitermu z Bazy danych" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2405589f-5f4c-4989-b0e1-8eee53254cd0" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6efbd10e-00a7-44d9-85cb-b287a60b925a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="720a5e3b-c2a6-4680-963c-bcee1a25f0b0" name="Odczytanie Unitermu z Bazy danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b564fb19-1a5e-4ecf-b82d-cbcd5c0197cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9b49a6f-362f-4f94-be7b-2169a5cf1505" />
+          </association>
+          <association Id="6e5b1c3f-6663-45bf-9688-bec421f2f8dd" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Stworzenie nowego Unitermu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1b3c15a3-4d9d-406a-a510-6ec233c7e6f7" LastKnownName="Stworzenie nowego Unitermu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f2c1fa8-2b47-4ea4-bcb4-8cc5935d51d0" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c4a4a885-62fd-450a-a020-79f024c26261" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3859979f-50c5-484d-89f9-fdc69432abae" name="Stworzenie nowego Unitermu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="934bbc45-4cbf-467e-8d45-c50d8ea7d45a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2bd13d80-de0b-4389-8b1c-0086eca2b215" />
+          </association>
+          <association Id="adedd401-a164-41c0-bd64-f7d95c48f159" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="zapisanie Unitermu do Bazy danych" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f8ab217a-b222-4b68-a2b4-4045e61d4974" LastKnownName="zapisanie Unitermu do Bazy danych" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3f560e9-6752-4e52-8444-6b541a4348c9" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b90b0de7-c8b1-414f-acc0-bd1b54778720" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c38c76ad-6801-49a4-9ba1-8f79fa7a0302" name="zapisanie Unitermu do Bazy danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="348e6f55-b77d-41f3-89aa-132f09a530ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="49bb5f7d-c572-4902-ad53-3abde8b11f29" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cc57579d-c54c-467b-ba0c-3b54d4bf129f" name="Odczytanie Unitermu z Bazy danych" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9c069d5-71a0-4d7b-ac96-d5c0c7f9075b" />
+        <targetEnds>
+          <association Id="2a18cabd-1cdf-4db7-8a66-f551065bd418" isDerived="false" sourceEndRoleName="Odczytanie Unitermu z Bazy danych" targetEndRoleName="Zamiana Sekwencjonowania na eliminacje" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6e8da4eb-92d0-4116-bd88-b48abfcb539e" LastKnownName="Zamiana Sekwencjonowania na eliminacje" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac92d39e-92ed-468a-b6bd-719a26ab7cfe" name="Odczytanie Unitermu z Bazy danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="27f3dc00-85a5-4b02-ae06-9ca43a8976ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac4adc5f-5016-483d-8258-b98f9d64e29c" name="Zamiana Sekwencjonowania na eliminacje" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45103fc8-2659-48ce-9ea6-38ddc7a92f2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="318e4fdd-b0e6-474f-988c-7a971e82dc6c" />
+          </association>
+          <association Id="e8fbcdf3-03fd-4a4d-a1c5-d97ac6984113" isDerived="false" sourceEndRoleName="Odczytanie Unitermu z Bazy danych" targetEndRoleName="Modyfikacja Unitermu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6baaf95-ddae-4171-85b4-6ad0b030b4f8" LastKnownName="Modyfikacja Unitermu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9c6716b-da5b-47d7-b19c-d01edf0a6a2d" name="Odczytanie Unitermu z Bazy danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4a932852-ffef-4353-98cd-102941f9615c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b7bf90c-d564-4b0c-98af-8bf3bedf49fc" name="Modyfikacja Unitermu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7879558c-6dec-4728-9064-974f15091c79" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2f887c66-4f43-4a15-9c2f-f9285dc552d1" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f8ab217a-b222-4b68-a2b4-4045e61d4974" name="zapisanie Unitermu do Bazy danych" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="265625b4-7ead-46ff-84be-c0a9bd0860cd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b3c15a3-4d9d-406a-a510-6ec233c7e6f7" name="Stworzenie nowego Unitermu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e8ed06e8-6fb8-4a55-ad28-305cbd61f488" />
+        <targetEnds>
+          <association Id="4b1e309b-7100-4a7e-9341-89bdb356ddd3" isDerived="false" sourceEndRoleName="Stworzenie nowego Unitermu" targetEndRoleName="Modyfikacja Unitermu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6baaf95-ddae-4171-85b4-6ad0b030b4f8" LastKnownName="Modyfikacja Unitermu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c5eb509-a7ab-4c84-8d8e-e708a1dc8a7a" name="Stworzenie nowego Unitermu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fc1e2a98-40a7-4560-bf59-48afa99a1730" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28f64752-fc48-445f-b756-a2877b862f65" name="Modyfikacja Unitermu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1f6a2d22-5a0d-4ae4-b437-7ce1578d3365" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="153c7beb-0f4e-4ed0-a513-8421ff48504d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6e8da4eb-92d0-4116-bd88-b48abfcb539e" name="Zamiana Sekwencjonowania na eliminacje" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d02f435e-97cc-4185-8f7a-3b9554143c63" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c6baaf95-ddae-4171-85b4-6ad0b030b4f8" name="Modyfikacja Unitermu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="524547e2-8197-4ca1-8e46-5a9daf4707fc" />
+        <targetEnds>
+          <association Id="c9839866-4526-4808-9c72-28e343ab8b90" isDerived="false" sourceEndRoleName="Modyfikacja Unitermu" targetEndRoleName="Zamiana Sekwencjonowania na eliminacje" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6e8da4eb-92d0-4116-bd88-b48abfcb539e" LastKnownName="Zamiana Sekwencjonowania na eliminacje" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="015ee843-d92c-464a-b747-a92b99e77389" name="Modyfikacja Unitermu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b456f2d-56c1-4409-b4bd-e1e4ed32a496" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4aba635d-161a-4e05-9581-23ade133d0af" name="Zamiana Sekwencjonowania na eliminacje" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="397cdf93-0991-4a9f-bcd1-46e4cc736cd5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b98bc88e-0e63-49ba-9a5f-ce740190448e" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="2364ebf4-6b44-4da2-b692-c4fabb4d4325" name="ModelingProject_MASI">
+    <elementDefinition Id="833d4fab-a764-4a0b-a528-9cb715636248" />
+  </package>
+</useCaseModelRoot>
