@@ -161,7 +161,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram.layout">
-      <DependentUpon>Window1_ehlbUNitermsSelectionChanged.sequencediagram</DependentUpon>
+      <DependentUpon>.sequencediagram</DependentUpon>
     </EmbeddedResource>
     <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation1.layerdiagram">
       <Link>DependencyValidation1.layerdiagram</Link>
@@ -175,7 +175,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram" />
+    <None Include=".sequencediagram" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

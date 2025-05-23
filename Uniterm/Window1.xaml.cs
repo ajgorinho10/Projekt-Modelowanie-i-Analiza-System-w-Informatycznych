@@ -193,12 +193,17 @@ namespace Uniterm
            // Int32 fontsize_1 = (Int32)MyDrawing.fontsize;
             try
             {
+                if(db == null)
+                {
+                    db = new DataBase();
+                }
 
                 db.AddData(MyDrawing.sA, MyDrawing.sB, MyDrawing.sOp, MyDrawing.eA, MyDrawing.eB, MyDrawing.eC, MyDrawing.fontFamily.ToString(), MyDrawing.fontsize, MyDrawing.oper,tbName.Text, tbDescription.Text);
 
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 MessageBox.Show(ex.Message, "Wystąpił błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
@@ -211,45 +216,58 @@ namespace Uniterm
           
         }
 
-        private bool CheckSave()
+        private bool CheckSave(object sender, SelectionChangedEventArgs e)
         {
 
             if (!modified)
                 return true;
             else
             {
-                switch (MessageBox.Show("Chcesz zapisać?", "Zapis", MessageBoxButton.YesNoCancel, MessageBoxImage.Question))
+                try
                 {
-                    case MessageBoxResult.Yes:
-                        {
-                            MenuItem_Click_1(null, null);
-                            modified = false;
-                            nowy = false;
-                            return true;
-                        }
-                    case MessageBoxResult.No:
-                        {
-                            modified = false;
-                            nowy = false;
-                            return true;
-                        }
-                    case MessageBoxResult.Cancel: return false;
-                    default: return false;
+                    switch (MessageBox.Show("Chcesz zapisać?", "Zapis", MessageBoxButton.YesNoCancel, MessageBoxImage.Question))
+                    {
+                        case MessageBoxResult.Yes:
+                            {
+                                if (tbName.Text == null || tbName.Text.Equals(""))
+                                {
+                                    throw new Exception("Nie podano nazwy!");
+                                }
+                                MenuItem_Click_1(sender, e);
+                                modified = false;
+                                nowy = false;
+                                return true;
+                            }
+                        case MessageBoxResult.No:
+                            {
+                                ehNowyClick(sender, e);
+                                modified = false;
+                                nowy = false;
+                                return true;
+                            }
+                        case MessageBoxResult.Cancel: return false;
+                        default: return false;
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Wystąpił błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return false;
                 }
             }
-
         }
 
         private void ehlbUNitermsSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Console.WriteLine("Odczytywanie z Bazy");
-            if (CheckSave())
+            string name = lbUniterms.SelectedValue.ToString();
+
+            if (CheckSave(sender, e))
             {
                 DataRow dr;
                 try
                 {
                     
-                    dr = db.GetDataByName(lbUniterms.SelectedValue.ToString()).Rows[0];
+                    dr = db.GetDataByName(name).Rows[0];
 
 
                     MyDrawing.eA = dr.IsNull("eA") ? null : dr["eA"].ToString().Trim();
