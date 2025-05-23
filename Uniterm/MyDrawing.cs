@@ -142,10 +142,10 @@ namespace Uniterm
             {
                 string text = sA + Environment.NewLine.ToString() + sOp;
 
-                DrawText(new Point(pt.X + GetTextLength(sOp) - 2 - 2, pt.Y + (fontsize / 3)), sA);
-                DrawText(new Point(pt.X + (fontsize / 3) - 2, pt.Y + (fontsize / 3) + GetTextHeight(sA) -3), sOp);
+                DrawText(new Point(pt.X + (fontsize / 3) , pt.Y + (fontsize / 3)), sA);
+                DrawText(new Point(pt.X + (fontsize / 3) - GetTextLength(sA)/2, pt.Y  + GetTextHeight(sOp)), sOp);
 
-                DrawElim(new Point(pt.X + GetTextLength(text), pt.Y + (fontsize / 3) + 5 + GetTextHeight(text)));
+                DrawElim(new Point(pt.X + GetTextLength(text), pt.Y + (fontsize / 3) + 3 + GetTextHeight(text)));
 
                 length += GetTextHeight(text) + (int)(fontsize / 3);
             }
