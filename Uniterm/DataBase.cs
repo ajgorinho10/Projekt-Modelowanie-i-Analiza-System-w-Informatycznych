@@ -5,8 +5,6 @@ using System.Text;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
-//using System.Data.SqlServerCe;
 
 
 namespace Uniterm
@@ -15,41 +13,17 @@ namespace Uniterm
     {
         #region Variables
 
-        //public static string connectionString = "Data Source=DRACO\\SQLEXPRESS;Initial Catalog=uniterm;Integrated security=true";
-        //public static string connectionString = "Data Source=MSSQL-SERWER\\MSSQL;Initial Catalog=s73484;Password=s73484; User Id=s73484";
-        //public static string connectionString = "Data Source=ovsyak\\SQLEXPRESS;Initial Catalog=slowik;Password=ovsyak; User Id=ovsyak";
-        //public static string connectionString = "Data Source=VOLODYMYR-ПК\\Microsoft SQL Server Compact 4.0 (.NET Framework);Initial Catalog=uniterms;Password=ovsyak; User Id=ovsyak";
-        //public static string connectionString = "Data Source=VOLODYMYR-ПК\\D:SLOWIK;Initial Catalog=uniterms";
-        //public static string connectionString = @"Data Source=KZI-VOSTRO2\\SQL Server Compact;Initial Catalog=C:\Users\Volodymir Ovsyak\Desktop\MASI_2013\MyDatabase#1.sdf;Password=ovsyak";
-        //public static string connectionString = @"Data Source=127.0.0.1:1520\\SQL Server Compact;C:\Users\Volodymir Ovsyak\Desktop\MASI_2013\MyDatabase#1.sdf;Password=ovsyak";
-        //public static string connectionString = "Data Source=C:\\Users\\Volodymir Ovsyak\\Desktop\\MASI_2013\\MyDatabase#1.sdf;";
-        //public static string connectionString = "Data Source=C:\\Users\\Volodymir Ovsyak\\Documents\\MyDatabase#3.sdf;";
-        //public static string connectionString = @"Data Source=C:\SLOWIK\Uniterm\Uniterm\_MyDatabase_1DataSet.xsd;";
-        //public static string connectionString = @"Data Source=Data Source=KZI-VOSTRO2\SQLEXPRESS;Initial Catalog=uniterm;Integrated Security=True";
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=uniterms;Integrated Security=True";
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=MOJA;Integrated Security=True";
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=STUDENT;Integrated Security=True";
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=STUDENTKA;Integrated Security=True";
-        //public static string connectionString = @"Data Source=C:\SLOWIK\VOSTROSQLSERWER;Initial Catalog=MASI.sdf;Password=ovsyak;User Id=ovsyak";
-        //public static string connectionString = @"Data Source=C:\SLOWIK\VOSTROSQLSERWER;Initial Catalog=ARTUR.dbo;Integrated Security=True";
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=ARTUR;Integrated Security=True";
-        //Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=ARTUR;Integrated Security=True;Pooling=False
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=PIT;Integrated Security=True";
-
-        //public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=BAZ;Integrated Security=True";
-
-      //  public static String connectionString = @"Data Source=KZI-VOSTRO2\VOSTROSQLSERWER;Initial Catalog=DH;Integrated Security=True";
-
+        string connectionString = "Server=localhost;Database=MASI;Trusted_Connection=True;";
         private SqlConnection conString;
 
         #endregion
 
         #region Builders and Finalizers
 
-        /*public DataBase()
+        public DataBase()
         {
-            this.conString = new SqlConnection(DataBase.connectionString);
-        }*/
+            this.conString = new SqlConnection(this.connectionString);
+        }
 
        /* public DataBase(string conStr)
         {
@@ -76,111 +50,118 @@ namespace Uniterm
 
         #region Methods
 
-       /* public void Connect()
+        public void Connect()
         {
             try
             {
-                this.conString.Open();
+                if (this.conString.State != ConnectionState.Open)
+                {
+                    this.conString.Open();
+                }
             }
-            catch (InvalidCastException ex)
+            catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Błąd połączenia z bazą danych: " + ex.Message);
             }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }*/
+        }
 
         public void Disconnect()
         {
-            try
+            if (this.conString.State == ConnectionState.Open)
             {
                 this.conString.Close();
             }
-            catch
-            {
-
-            }
         }
 
-        public SqlDataAdapter CreateAdapter(string query)
+        public void AddData(string sA, string sB, string sOp,
+                            string eA, string eB, string eC,
+                            string fontFamily, int fontSize, char oper,
+                            string name, string description)
         {
-            return new SqlDataAdapter(query, this.ConnectionString);
-        }
 
-        /*public DataTable CreateDataTable(string query)
-        {
-            DataTable tab = new DataTable();
+            DeleteDataByName(name); // Usunięcie danych o tej samej nazwie przed dodaniem nowych
 
-           // this.Connect();
 
-            if (this.ConnectionString.State == ConnectionState.Open)
+
+            string query = @"
+        INSERT INTO Data 
+        (sA, sB, sOp, eA, eB, eC, fontFamily, fontSize, oper, name, description) 
+        VALUES 
+        (@sA, @sB, @sOp, @eA, @eB, @eC, @fontFamily, @fontSize, @oper, @name, @description)";
+
+            using (SqlCommand cmd = new SqlCommand(query, this.conString))
             {
-                SqlDataAdapter ad = CreateAdapter(query);
+                cmd.Parameters.AddWithValue("@sA", sA ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@sB", sB ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@sOp", sOp ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@eA", eA ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@eB", eB ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@eC", eC ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@fontFamily", fontFamily ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@fontSize", fontSize);
+                cmd.Parameters.AddWithValue("@oper", oper.ToString()); // char jako string
+                cmd.Parameters.AddWithValue("@name", name ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@description", description ?? (object)DBNull.Value);
 
-                ad.Fill(tab);
-            }
-            else
-            {
-                throw new Exception("Nie można połączyć się z bazą daych");
-            }
-
-            this.Disconnect();
-
-            return tab;
-        }*/
-
-        public DataRow CreateDataRow(string query)
-        {
-            DataTable tab = new DataTable();
-
-            DataRow row;
-
-           // this.Connect();
-
-            if (this.ConnectionString.State == ConnectionState.Open)
-            {
-
-                SqlDataAdapter ad = CreateAdapter(query);
-
-                ad.Fill(tab);
-                try
-                {
-                    row = tab.Rows[0];
-                }
-                catch
-                {
-                    row = null;
-                }
-            }
-            else
-            {
-                throw new Exception("Nie można połączyć się z bazą daych");
-            }
-
-            this.Disconnect();
-
-            return row;
-        }
-
-        public void RunQuery(string query)
-        {
-           // this.Connect();
-
-            if (this.ConnectionString.State == ConnectionState.Open)
-            {
-                SqlCommand cmd = new SqlCommand(query, this.ConnectionString);
-
+                Connect();
                 cmd.ExecuteNonQuery();
+                Disconnect();
             }
-            else
+        }
+
+        public DataTable GetData()
+        {
+            string query = "SELECT * FROM DATA";
+            DataTable dataTable = new DataTable();
+
+            using (SqlCommand cmd = new SqlCommand(query, this.conString))
             {
-                throw new Exception("Nie można połączyć się z bazą daych");
+                Connect();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                Disconnect();
             }
 
-            this.Disconnect();
+            return dataTable;
         }
+
+        public DataTable GetDataByName(string name)
+        {
+            string query = "SELECT * FROM DATA WHERE name = @name";
+            DataTable dataTable = new DataTable();
+
+            using (SqlCommand cmd = new SqlCommand(query, this.conString))
+            {
+                cmd.Parameters.AddWithValue("@name", name);
+
+                Connect();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                Disconnect();
+            }
+
+            return dataTable;
+        }
+
+        public void DeleteDataByName(string name)
+        {
+            string query = "DELETE FROM Data WHERE name = @name";
+
+            using (SqlCommand cmd = new SqlCommand(query, this.conString))
+            {
+                cmd.Parameters.AddWithValue("@name", name);
+
+                Connect();
+                cmd.ExecuteNonQuery();
+                Disconnect();
+            }
+        }
+
+
         #endregion
     }
 }
