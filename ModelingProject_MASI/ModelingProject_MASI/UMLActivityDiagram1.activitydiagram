@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="d99ab7a9-b3da-4cff-a17d-f70f0fa4e7cd" name="Activity1" linkedPackageId="1381cc1d-3086-4332-b900-0404a9f33722" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="dae3a7b1-5675-47fc-a98d-f1544fad005a">
+      <elementDefinition Id="e7595b9d-9e77-4db6-9f72-b48c392225fd" />
+      <body>Czy uniterm z bazy danych ?</body>
+    </comment>
+    <comment Id="fc6aedad-29b8-4a45-b494-b281d0dacb48">
+      <elementDefinition Id="a64c4be9-0b8f-4a17-a124-53cb731061d7" />
+      <body>Tak</body>
+    </comment>
+    <comment Id="cf1f59c0-7152-4785-83dd-6031522c1d61">
+      <elementDefinition Id="0767274d-e0eb-4c5b-8c32-001cbf704414" />
+      <body>Nie</body>
+    </comment>
+    <comment Id="0017b4f7-83d8-4497-847d-f8ef8a1e0616">
+      <elementDefinition Id="31ac697a-a111-4293-a9f4-3fb40c7ecb50" />
+      <body>Czy zamiana Sekwencjonowania na Eliminacje ?</body>
+    </comment>
+    <comment Id="2cad03b8-3c36-4283-9387-b4016ae5e848">
+      <elementDefinition Id="aedc6606-4fb7-46bd-ae58-e1fa3968d36a" />
+      <body>Tak</body>
+    </comment>
+    <comment Id="8e11ce5e-d769-4e86-b87b-6f7adc1535b5">
+      <elementDefinition Id="1ca10507-d5e0-4d86-b9c2-f64bb2c9fd47" />
+      <body>Czy zamienić część A czy B ?</body>
+    </comment>
+    <comment Id="d7672c07-68de-40c5-9c9a-71f6c15a9391">
+      <elementDefinition Id="c5949a25-347f-4f52-b34e-a332a5724e33" />
+      <body>Część A</body>
+    </comment>
+    <comment Id="1e81ef8c-8cca-405f-a3a9-d4407584266a">
+      <elementDefinition Id="144da71c-2d9c-45d6-9a34-b67149c949a3" />
+      <body>Część B</body>
+    </comment>
+    <comment Id="5aaadb8d-4db8-4688-98b1-9cac64f815e0">
+      <elementDefinition Id="d4fe0de8-1f16-4c60-92af-164fa6824d04" />
+      <body>Czy dane poprawne ?</body>
+    </comment>
+    <comment Id="4b72a758-e951-4954-a4c7-afafaa1466f1">
+      <elementDefinition Id="fee40be7-e817-40f9-9dbb-2c4247f5c7fd" />
+      <body>Tak</body>
+    </comment>
+    <comment Id="6cf5c577-7945-4476-860d-6af7793a0406">
+      <elementDefinition Id="ddd9b36d-d3fd-498c-9f49-5bffea3eac38" />
+      <body>Nie</body>
+    </comment>
+    <comment Id="9f9c418d-b742-4c53-9739-93cbb4c642e2">
+      <elementDefinition Id="2af6a97d-e9b3-4e97-b853-a8e949327403" />
+      <body>Czy zapisać uniterm w bazie danych ?</body>
+    </comment>
+    <comment Id="763f045c-72ad-4f02-85f6-1fa0a390c706">
+      <elementDefinition Id="986034bb-a55c-4227-b22a-cb033c0c0b68" />
+      <body>Tak</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="6ba2bb5c-ce58-4649-a0d1-09d6f0bf1488">
+      <profileInstance Id="e7393108-2bf1-43da-b343-c7ba2c579ca4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="475e3ca8-0fcf-408b-8c4a-03970c677b81">
+      <profileInstance Id="962f66b1-cffb-4968-b239-21bba746f61e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="deca3ce7-b11b-4341-b43d-0ded63da6e26" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b17e8eb1-1dda-4750-bdbb-afee63b729d6" />
+        <nodes>
+          <initialNode Id="0f503150-8268-4271-9824-d29c7824c1f4" name="Initial1" isLeaf="false">
+            <elementDefinition Id="8680845e-5633-41ad-a832-d7c36a413e75" />
+            <flowNodeTargets>
+              <controlFlow Id="f88584e6-3de2-4c9f-ac5a-31da665f97df" isLeaf="false">
+                <opaqueActionMoniker Id="2d321947-96a4-4df5-a83f-9a0a7c5c0590" LastKnownName="Pobrać dane z bazy" />
+                <elementDefinition Id="7ef346c5-1a32-4d7f-b983-09cb724c16a8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="2d321947-96a4-4df5-a83f-9a0a7c5c0590" name="Pobrać dane z bazy" isLeaf="false">
+            <elementDefinition Id="41c0c018-28cf-45a8-b21b-bc5893ad0f18" />
+            <flowNodeTargets>
+              <controlFlow Id="9a2e6faa-282d-4ba2-9179-0d65e0bfe43e" isLeaf="false">
+                <decisionNodeMoniker Id="e41bad14-5b08-4e8e-9f97-94d215f83a8a" LastKnownName="Decision1" />
+                <elementDefinition Id="049f6d76-c482-4bb5-9538-f20b1ad1d62b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="e41bad14-5b08-4e8e-9f97-94d215f83a8a" name="Decision1" isLeaf="false">
+            <elementDefinition Id="f6a44e96-1913-4f9f-8a6b-6132c6cf80ac" />
+            <flowNodeTargets>
+              <controlFlow Id="e1cbb3cb-7113-4bcb-b146-bed27a60f2f9" isLeaf="false">
+                <opaqueActionMoniker Id="450a6264-a193-49ef-a4d3-42c578c93c0d" LastKnownName="Załadowanie unitermu z bazy" />
+                <elementDefinition Id="ff4da1a3-ebf1-4850-a421-69096773ffdb" />
+              </controlFlow>
+              <controlFlow Id="a7c078a4-d0bf-41df-b9b0-14f953c58bc2" isLeaf="false">
+                <opaqueActionMoniker Id="7820b653-f5f7-435c-8a78-5f68fdcd20bf" LastKnownName="Nowy uniterm" />
+                <elementDefinition Id="f6329e69-f144-4311-bbe0-0b5abf919d79" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="450a6264-a193-49ef-a4d3-42c578c93c0d" name="Załadowanie unitermu z bazy" isLeaf="false">
+            <elementDefinition Id="4de73c60-1447-47e0-bea3-0c58a6d9cfd9" />
+            <flowNodeTargets>
+              <controlFlow Id="8bbde8cb-fda1-4136-a146-ac7e9c2642bf" isLeaf="false">
+                <opaqueActionMoniker Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" LastKnownName="Rysowanie Unitermu" />
+                <elementDefinition Id="d0dcdb9d-3d19-4953-8a9b-43ddc86b6e9a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7820b653-f5f7-435c-8a78-5f68fdcd20bf" name="Nowy uniterm" isLeaf="false">
+            <elementDefinition Id="e989eafd-9481-4d02-878f-04c12de22d98" />
+            <flowNodeTargets>
+              <controlFlow Id="a109b0b5-d970-4053-8a37-73ce6a08fee4" isLeaf="false">
+                <opaqueActionMoniker Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" LastKnownName="Rysowanie Unitermu" />
+                <elementDefinition Id="747834e8-af80-49a7-bad3-a55d4197dc50" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" name="Rysowanie Unitermu" isLeaf="false">
+            <elementDefinition Id="b0b9f6ab-d451-4b98-beea-a6459cf2404b" />
+            <flowNodeTargets>
+              <controlFlow Id="1fc36c4f-bce8-4c69-87dc-d858142fc790" isLeaf="false">
+                <decisionNodeMoniker Id="760f6b1b-42ef-48e6-b4a2-178110cb3686" LastKnownName="Decision11" />
+                <elementDefinition Id="6b7b13f2-679b-429c-a487-5f5d082237e5" />
+              </controlFlow>
+              <controlFlow Id="d22ec47c-b22b-41f9-92a5-b7732c56faec" isLeaf="false">
+                <decisionNodeMoniker Id="42881bfc-1452-4580-a761-07e16df64d9d" LastKnownName="Decision113" />
+                <elementDefinition Id="eb436e8a-49af-4545-8e25-c92fa67aec35" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="760f6b1b-42ef-48e6-b4a2-178110cb3686" name="Decision11" isLeaf="false">
+            <elementDefinition Id="0795ab47-b092-4a00-bd01-d195ced8e76d" />
+            <flowNodeTargets>
+              <controlFlow Id="5a319cf2-9c5d-4d2a-a75b-7f5480ec0be2" isLeaf="false">
+                <decisionNodeMoniker Id="752268d9-1aa7-43f1-b955-e92a278e9224" LastKnownName="Decision111" />
+                <elementDefinition Id="3cfea4a2-4295-4313-8cf5-812584e85ffe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="752268d9-1aa7-43f1-b955-e92a278e9224" name="Decision111" isLeaf="false">
+            <elementDefinition Id="a8874701-8912-4159-8c99-a60f45978580" />
+            <flowNodeTargets>
+              <controlFlow Id="5342533c-ae5b-4aad-893d-c50a659e1f16" isLeaf="false">
+                <opaqueActionMoniker Id="5851967a-7c73-4eba-83f7-7b307a8010a3" LastKnownName="Nowy Uniterm z eliminacją w części pierwszej" />
+                <elementDefinition Id="79d293c8-b953-414e-a493-57db834cc54e" />
+              </controlFlow>
+              <controlFlow Id="9a8f4471-7e2d-42c4-bfc9-fad157f735d9" isLeaf="false">
+                <opaqueActionMoniker Id="b3c815c4-19bf-462b-9736-14a3fd09962d" LastKnownName="Nowy Uniterm z eliminacją w części drugiej" />
+                <elementDefinition Id="7f7c6c2b-a74d-4427-9008-07aa5c46e760" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="5851967a-7c73-4eba-83f7-7b307a8010a3" name="Nowy Uniterm z eliminacją w części pierwszej" isLeaf="false">
+            <elementDefinition Id="3b1dc448-eef4-48f3-91c4-dd4a0cc2ed34" />
+            <flowNodeTargets>
+              <controlFlow Id="3c33eb0d-a206-4854-85eb-85c67e0ac055" isLeaf="false">
+                <opaqueActionMoniker Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" LastKnownName="Rysowanie Unitermu" />
+                <elementDefinition Id="aba40e14-5df5-4689-b5ec-560f88b0fe19" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b3c815c4-19bf-462b-9736-14a3fd09962d" name="Nowy Uniterm z eliminacją w części drugiej" isLeaf="false">
+            <elementDefinition Id="b779204f-26e3-4545-89c6-acc71d021011" />
+            <flowNodeTargets>
+              <controlFlow Id="aae5e4b8-0d96-4d0c-8833-5f192e2c45d4" isLeaf="false">
+                <opaqueActionMoniker Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" LastKnownName="Rysowanie Unitermu" />
+                <elementDefinition Id="e4b7e348-f916-406d-9024-093c803eaac4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="01e9c1bc-b9e2-4905-ade3-5fb69ca73625" name="Podaj nazwę i opis unitermu" isLeaf="false">
+            <elementDefinition Id="6e29c14a-1d11-4a5e-9886-f0fc36cb3b9d" />
+            <flowNodeTargets>
+              <controlFlow Id="ba68fb02-07e8-42ab-9399-2b133935a95b" isLeaf="false">
+                <decisionNodeMoniker Id="f4eadaa1-8e37-4c4c-8b65-86d68e7928e4" LastKnownName="Decision112" />
+                <elementDefinition Id="b98cfee5-2123-438d-9b40-df26b979c466" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="f4eadaa1-8e37-4c4c-8b65-86d68e7928e4" name="Decision112" isLeaf="false">
+            <elementDefinition Id="864699e1-be59-40ea-bfc1-b239f1a27ddd" />
+            <flowNodeTargets>
+              <controlFlow Id="ab214d0e-84ae-4d91-822e-3b5bed3af68b" isLeaf="false">
+                <opaqueActionMoniker Id="bf0ca047-cc07-4c3e-ae83-b446168872f6" LastKnownName="Zapisanie unitermu" />
+                <elementDefinition Id="616c4d00-7c54-4130-a4ec-89f25ffc4c4b" />
+              </controlFlow>
+              <controlFlow Id="91b799f2-a3b8-4926-803a-8678e5a6cd4b" isLeaf="false">
+                <opaqueActionMoniker Id="c3384bfa-2b9d-4cfe-b889-b21540414110" LastKnownName="Wyświetlenie komunikatu o błędzie" />
+                <elementDefinition Id="626be500-2743-4c8a-aec3-d98931440ead" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="bf0ca047-cc07-4c3e-ae83-b446168872f6" name="Zapisanie unitermu" isLeaf="false">
+            <elementDefinition Id="4f46367e-267b-4368-9815-1506003bd26d" />
+          </opaqueAction>
+          <opaqueAction Id="c3384bfa-2b9d-4cfe-b889-b21540414110" name="Wyświetlenie komunikatu o błędzie" isLeaf="false">
+            <elementDefinition Id="0c2fe1b7-605e-413f-a96b-4c1478fce94b" />
+            <flowNodeTargets>
+              <controlFlow Id="72ef4e48-1f34-415c-8c22-c2b428998cff" isLeaf="false">
+                <opaqueActionMoniker Id="904b9dcb-0e02-4277-8ccf-2d3cd51e9ae6" LastKnownName="Rysowanie Unitermu" />
+                <elementDefinition Id="d73e4cb9-447c-4561-b7ff-65e9f91c15ff" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="42881bfc-1452-4580-a761-07e16df64d9d" name="Decision113" isLeaf="false">
+            <elementDefinition Id="9add63a7-da08-4ec1-8166-8efc07cfd997" />
+            <flowNodeTargets>
+              <controlFlow Id="a24d9f8a-19cc-482e-92b1-487b5a93d1a4" isLeaf="false">
+                <opaqueActionMoniker Id="01e9c1bc-b9e2-4905-ade3-5fb69ca73625" LastKnownName="Podaj nazwę i opis unitermu" />
+                <elementDefinition Id="1a07b844-e1ee-41cf-ac9a-75311c0d8642" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="1381cc1d-3086-4332-b900-0404a9f33722" name="ModelingProject_MASI">
+    <elementDefinition Id="833d4fab-a764-4a0b-a528-9cb715636248" />
+  </package>
+</activityRootModel>

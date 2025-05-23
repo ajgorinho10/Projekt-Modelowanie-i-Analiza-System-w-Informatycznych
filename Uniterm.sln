@@ -17,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39D28E9B-21F0-4162-9ED7-411462AB30DB}
 	EndGlobalSection
 EndGlobal

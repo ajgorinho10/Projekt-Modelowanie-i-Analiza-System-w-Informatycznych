@@ -160,26 +160,22 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window1_ehCBFontsChanged.sequencediagram.layout">
-      <DependentUpon>Window1_ehCBFontsChanged.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window1_ehCBFontsChanged_1.sequencediagram.layout">
-      <DependentUpon>Window1_ehCBFontsChanged_1.sequencediagram</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram.layout">
-      <DependentUpon>Window1_ehlbUNitermsSelectionChanged.sequencediagram</DependentUpon>
+      <DependentUpon>.sequencediagram</DependentUpon>
     </EmbeddedResource>
+    <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Window1_ehCBFontsChanged.sequencediagram" />
-    <None Include="Window1_ehCBFontsChanged_1.sequencediagram" />
-    <None Include="Window1_ehlbUNitermsSelectionChanged.sequencediagram" />
+    <None Include=".sequencediagram" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

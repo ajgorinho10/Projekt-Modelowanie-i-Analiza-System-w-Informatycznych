@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject_MASI", "ModelingProject_MASI\ModelingProject_MASI.modelproj", "{60EC1B36-F698-42D5-8B8C-D304D25749F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD63F1CD-CE98-4A42-87F6-44BC69056FA3}"
+	ProjectSection(SolutionItems) = preProject
+		ModelingProject_MASI\Window1_ehlbUNitermsSelectionChanged.sequencediagram = ModelingProject_MASI\Window1_ehlbUNitermsSelectionChanged.sequencediagram
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60EC1B36-F698-42D5-8B8C-D304D25749F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EC1B36-F698-42D5-8B8C-D304D25749F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60EC1B36-F698-42D5-8B8C-D304D25749F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60EC1B36-F698-42D5-8B8C-D304D25749F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
